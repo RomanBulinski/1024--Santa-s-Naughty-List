@@ -18,4 +18,8 @@ public class SantasList {
         }
     }
 
+    public static List<String> findChildrenTeBestSolution(List<String> santasList, List<String> children) {
+        return children.stream().filter(c -> santasList.contains(c)).distinct().sorted().collect(Collectors.toList());
+    }
+
 }
